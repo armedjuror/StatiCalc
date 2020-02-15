@@ -1,6 +1,12 @@
-from operator import Data
+from StatiCalc.control import StatiCalc
 
+calc = StatiCalc()
+calc.start()
 
-data = Data()
-data.collect_data()
-data.calculate_all()
+while True:
+    try:
+        calc.run()
+    except ZeroDivisionError:
+        print("Enter a data only at a time! Previously initiated creation of dataset is discarded. Now create a new "
+              "dataset")
+        continue
