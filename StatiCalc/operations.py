@@ -44,3 +44,11 @@ def deviation(data_set):
     result['std'] = math.sqrt(result['var'])
     result['cv'] = (result['std'] / average) * 100
     return result
+
+
+def sample_deviation(data_set):
+    result = {}
+    deviation_result = deviation(data_set)
+    result['sample_var'] = deviation_result['var'] * len(data_set)/(len(data_set) - 1)
+    result['sample_sd'] = math.sqrt(result['sample_var'])
+    return result

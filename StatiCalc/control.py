@@ -75,6 +75,10 @@ class StatiCalc:
                     print(f"Standard Deviation = {data_set.std}")
                 elif command == 'cv':
                     print(f"Coefficient of Variation = {data_set.cv}")
+                elif command == 'sample_var':
+                    print(f"Sample Variance = {data_set.sample_var}")
+                elif command == 'sample_sd':
+                    print(f"Sample Standard Deviation = {data_set.sample_sd}")
                 elif command == 'all':
                     print(f"Mean = {data_set.mean_value}")
                     print(f"Median = {data_set.median_value}")
@@ -82,6 +86,8 @@ class StatiCalc:
                     print(f"Variance = {data_set.variance}")
                     print(f"Standard Deviations = {data_set.std}")
                     print(f"Coefficient of Variation = {data_set.cv}")
+                    print(f"Sample Standard Deviation = {data_set.sample_sd}")
+                    print(f"Sample Variance = {data_set.sample_var}")
                 elif command == 'show dataset':
                     print(data_set.data)
                 elif command == 'modify dataset':
@@ -103,5 +109,5 @@ class StatiCalc:
                 Email : {dev.email}
                 Website : {dev.web}
                 Company : {dev.company}
-                Company Website : {dev.company_web}""")
+                """)
 

@@ -1,4 +1,4 @@
-from StatiCalc.operations import mean, median, mode, deviation
+from StatiCalc.operations import mean, median, mode, deviation, sample_deviation
 from termcolor import colored
 from StatiCalc.helper import helper
 
@@ -15,16 +15,23 @@ class Data:
         self.variance = 0
         self.cv = 0
         self.std = 0
+        self.sample_var = 0
+        self.sample_sd = 0
 
     def collect_data(self):
         data_set = self.data
         print(colored("Data will be read until the first non-numeric character", 'red'))
         while True:
             data = input("Enter a data : ")
-            if data.isdigit():
+            try:
+                float(data)
                 data_set.append(float(data))
-            else:
+            except:
                 break
+            # if data.isdigit():
+            #     data_set.append(float(data))
+            # else:
+            #     break
         self.data = data_set
 
     def modify(self):
@@ -84,11 +91,17 @@ class Data:
         self.std = deviations['std']
         self.cv = deviations['cv']
 
+    def sample_deviation(self):
+        sample_deviations = sample_deviation(self.data)
+        self.sample_sd = sample_deviations['sample_sd']
+        self.sample_var = sample_deviations['sample_var']
+
     def all(self):
         self.mean()
         self.median()
         self.mode()
         self.deviation()
+        self.sample_deviation()
 
 
 def data_init():

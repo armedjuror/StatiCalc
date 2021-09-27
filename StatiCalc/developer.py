@@ -1,6 +1,5 @@
 class Developer:
-    name = "Ajwad Juman PC"
-    email = {"public.ajpc@gmail.com": "mailto:public.ajpc@gmail.com", "sales@cybercraft-technologies.in": "mailto:sales@cybercraft-technologies.in"}
-    web = "http://ajwadjumanpc.github.io"
-    company = "Cybercraft Technologies"
-    company_web = "http://www.cybercraft-technologies.in"
+    name = "Armed Juror"
+    email = {"armedjuror@gmail.com": "mailto:armedjuror@gmail.com"}
+    web = "http://armedjuror.me"
+    company = "Indian Institute of Technology Kharagpur"

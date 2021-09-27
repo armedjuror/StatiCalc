@@ -27,5 +27,7 @@ def helper():
             4. variance             - Variance
             5. sd                   - Standard deviation
             6. cv                   - Coefficient of variance
-            7. all                  - Calculate all above functions
+            7. sample_sd            - Sample Standard Deviation
+            8. sample_var           - Sample Variance
+            9. all                  - Calculate all above functions
             """)
